@@ -1,12 +1,21 @@
 GET http://localhost:3001/api/notes/
 
 ###
+GET http://localhost:3001/api/notes/653fb4a240da106d1c6f9492
+
+### WrongId
+GET http://localhost:3001/api/notes/653fb4a240da106d1c6f9498
+
+### Malformatted ID
+GET http://localhost:3001/api/notes/MalformattedID
+
+###
 POST http://localhost:3001/api/notes/ HTTP/1.1
 content-type: application/json
 
 {
-    "content": "sample",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+    "content": "lol",
+    "important": true
 }
 ###
-DELETE http://localhost:3001/api/notes/5
+DELETE http://localhost:3001/api/notes/653fb67c1796bf9baab26aab
